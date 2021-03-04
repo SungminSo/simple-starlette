@@ -1,15 +1,13 @@
 import uvicorn
 
 from starlette.applications import Starlette
-from starlette.responses import JSONResponse
 from starlette.routing import Route
 
+from api import *
 
-async def example(request):
-    return JSONResponse({'msg': 'hello'})
 
 routes = [
-    Route('/', example),
+    Route('/', rest_example),
 ]
 
 app = Starlette(routes=routes)
