@@ -8,6 +8,7 @@ authors = ["SungminSo <soos196@hanyang.ac.kr>"]
 python = "^3.9"
 starlette = "^0.14.2"
 uvicorn = "^0.13.4"
+graphene = "^2.1.8"
 
 [tool.poetry.dev-dependencies]
 
