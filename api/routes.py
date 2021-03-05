@@ -1,8 +1,8 @@
 from starlette.routing import Route
 
-from .views import rest_example
+from .views import Hello
 
 
 rest_routes = [
-    Route('/hello', rest_example),
+    Route('/hello', Hello),
 ]
