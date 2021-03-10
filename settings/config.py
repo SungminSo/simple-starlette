@@ -2,6 +2,8 @@ import os
 
 
 class BaseConfig:
+    MODE = os.getenv("MODE", "dev")
+
     REDIS_HOST = "127.0.0.1"
     REDIS_PORT = 6379
     REDIS_DB = 0
@@ -16,9 +18,9 @@ class StageConfig(BaseConfig):
 
 
 class ProdConfig(BaseConfig):
-    REDIS_HOST = os.getenv("redis_host")
-    REDIS_PORT = os.getenv("redis_port")
-    REDIS_DB = os.getenv("redis_db")
+    REDIS_HOST = os.getenv("REDIS_HOST")
+    REDIS_PORT = os.getenv("REDIS_PORT")
+    REDIS_DB = os.getenv("REDIS_DB")
 
 
 config_map = dict(
